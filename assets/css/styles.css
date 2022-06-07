@@ -1,12 +1,10 @@
 body {
-    /* width: 100%; */
     min-width: fit-content;
 
     background-color: #000000 !important;
     overflow-y: scroll;
     overflow-x: hidden;
     font-family: 'Open Sans';
-    /* overflow: hidden; Hide scrollbars */
 }
 
 h1, h4, p {
@@ -105,6 +103,14 @@ header.home-hero video {
     opacity: 0.5;
     z-index: -1;
 }
+#heroImage {
+    position: absolute;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
 
 .hero-text {
     position: absolute;
@@ -113,7 +119,6 @@ header.home-hero video {
     transform: translate(-50%, -50%);
     color: white;
 }
-
 /* Section Sizing */
 
 div.section {
