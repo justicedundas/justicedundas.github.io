@@ -1,0 +1,193 @@
+body {
+    /* width: 100%; */
+    min-width: fit-content;
+
+    background-color: #000000 !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Open Sans';
+    /* overflow: hidden; Hide scrollbars */
+}
+
+h1, h4, p {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+h3.dark {
+    color: #000000;
+}
+
+/* Divider */
+div.divider {
+    margin: auto;
+    width: 25%;
+    padding-bottom: 2vh;
+}
+
+div.splitter {
+    padding-bottom: 2vh;
+}
+
+.divider-white {
+    filter: invert(1) contrast(0.5);
+}
+/* List */
+ul {
+    list-style-type: none;
+    pointer-events: auto;
+}
+.list {
+    padding: 0;
+    text-align: left;
+    color: floralwhite;
+}
+
+.wrapper {
+    margin:auto;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    padding: 0;
+    background-color:  rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #FFFFFF;
+    border-top: 1px solid white;
+}
+
+.navbar a.active {
+    color: #FFFFFF;
+    border-top: 1px solid white;
+}
+
+.navbar.scrolled {
+    background-color:  rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Hero Video */
+
+header.home-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+header.home-hero video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Section Sizing */
+
+div.section {
+    padding: 60px 0;
+    height: 100vh;
+    width: 100vw;
+    height: fit-content;
+}
+
+/* Slideshow */
+
+div.slideshow {
+    margin: auto;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 80%;
+}
+
+
+/* Property layout */
+
+div#property {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+div.img {
+    padding: 5vh 5vw;
+}
+
+/* Details layout */
+div#details {
+    height: 90vh;
+    width: 100%;
+    padding-top: 5em;
+}
+
+h1.asking-price {
+    display: inline-block !important;
+    border: 3px solid #FFD580;
+    margin: auto;
+    width: auto;
+}
+
+div.card {
+    background-color: azure;
+    text-align: center;
+}
+
+div.info {
+    height: min-content;
+}
+
+div.price {
+    width: -webkit-fill-available;
+}
+
+/* Maps Section */
+div.maps {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    height: fit-content;
+    width: 100%;
+    padding-top: 2em;
+
+}
+
+
+/* Contact Section */
+div.contact {
+    color: #FFFFFF;
+    height: 50vh;
+    width: 100%;
+    padding-top: 2em;
+}
