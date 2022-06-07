@@ -103,7 +103,8 @@ header.home-hero video {
     opacity: 0.5;
     z-index: -1;
 }
-#heroImage {
+
+img#heroImage {
     position: absolute;
     height: 100vh;
     overflow: hidden;
