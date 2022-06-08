@@ -179,6 +179,10 @@ div.price {
     width: -webkit-fill-available;
 }
 
+#posession {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
 /* Maps Section */
 div.maps {
     background-color: #FFFFFF !important;
@@ -191,9 +195,26 @@ div.maps {
 
 
 /* Contact Section */
+.dark-text {
+    color: #000000 !important;
+}
+
+.h5 {
+    color: #000000 !important;
+}
 div.contact {
-    color: #FFFFFF;
+    color: #000000;
     height: 50vh;
     width: 100%;
     padding-top: 2em;
+}
+
+.contact-item {
+    background: #fff;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
 }
