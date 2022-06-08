@@ -129,6 +129,12 @@ div.section {
     height: fit-content;
 }
 
+/* Information */
+
+.information {
+    background: #FFFFFF;
+}
+
 /* Slideshow */
 
 div.slideshow {

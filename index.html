@@ -58,6 +58,13 @@
       </div>
    </header>
 
+   <!-- Details -->
+   <section class="information">
+      <div class="container">
+         <img src="assets/img/desktop.png" alt="" width="100%" id="infoImg">
+      </div>
+   </section>
+
    <!-- Slidesow -->
    <div class="container-fluid section slideshow" id="slideshow">
       <div class="container container-wide">
@@ -316,14 +323,20 @@
 
    if (window.matchMedia("(max-width: 900px)").matches) {
       const heroVideo = document.getElementById("heroVideo");
+      const infoDesktop = document.getElementById("infoImg");
       const heroImg = document.createElement("img");
+      const infoImg = document.createElement("img");
 
       // set Attributes
       heroImg.setAttribute("id", "heroImage")
       heroImg.setAttribute('src', 'assets/img/bg-1.jpg');
 
+      infoImg.setAttribute("src", "assets/img/mobile.png");
+      infoImg.setAttribute("width", "100%");
+
       // Replace with image
       heroVideo.replaceWith(heroImg);
+      infoDesktop.replaceWith(infoImg);
    };
 
 </script>
