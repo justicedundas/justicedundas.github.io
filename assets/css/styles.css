@@ -69,9 +69,35 @@ section {
 # Hero Header
 ------------------------------------------------*/
 
-header iframe {
+header.home-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+header.home-hero video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
 }
+
+img#heroImage {
+    position: absolute;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
 /*------------------------------------------------
 # About Section
 ------------------------------------------------*/
@@ -172,6 +198,12 @@ header iframe {
     position: relative;
 }
 
+.details h4 {
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+
 .details ul {
     list-style-type: none;
     pointer-events: auto;
@@ -180,7 +212,7 @@ header iframe {
 .details .list {
     padding: 0;
     text-align: left;
-    color: var(--color-secondary);
+    color: var(--color-default);
 }
 
 .details .wrapper {
@@ -225,35 +257,7 @@ header iframe {
 
 /* Hero Video */
 
-header.home-hero {
-    position: relative;
-    height: 100vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-}
 
-
-header.home-hero video {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
-    z-index: -1;
-}
-
-img#heroImage {
-    position: absolute;
-    height: 100vh;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
 
 /* Details layout */
 div#details {
@@ -264,13 +268,14 @@ div#details {
 
 h1.asking-price {
     display: inline-block !important;
+    color: var(--color-secondary);
+    font-weight: 800;
     border: 3px solid #FFD580;
     margin: auto;
     width: auto;
 }
 
 div.card {
-    background-color: azure;
     text-align: center;
 }
 
@@ -283,19 +288,23 @@ div.price {
 }
 
 #posession {
-    color: var(--color-secondary) !important;
+    color: var(--color-default) !important;
 }
 
 /* Maps Section */
-div.maps {
+.maps {
     background-color: #FFFFFF !important;
-    color: #000000 !important;
     height: fit-content;
     width: 100%;
     padding-top: 2em;
 
 }
 
+.maps h3 {
+    font-size: 3em;
+    text-align: center;
+    color: var(--color-secondary);
+}
 
 /* Contact Section */
 .dark-text {
