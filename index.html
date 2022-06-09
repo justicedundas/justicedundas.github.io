@@ -8,19 +8,14 @@
    <title>Ardoch Lake</title>
    <!-- Google Font - Poppins -->
    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
    <!-- Font Awesome Icons -->
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
-
    <!-- Bootstrap import -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script></head>
-
    <!-- plyr Video Player -->
    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
-
    <!-- Import CSS -->
    <link rel="stylesheet" href="assets/css/styles.css" >
 </head>
@@ -37,54 +32,53 @@
          <p id="percent">1%</p>
       </div>
    </div>
-   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="#">
-            <img src="assets/img/logo.png" width="60" height="60" alt="">
-            Ardoch Lake
-         </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-            <ul class="navbar-nav">
-               <li class="nav-item">
-                  <a class="nav-link" href="#home">HOME</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#about">ABOUT</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#property">PROPERTY</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#details">DETAILS</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#maps">MAPS</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#contact">CONTACT</a>
-               </li>
-            </ul>
+   <header>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scroll">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+               <img src="assets/img/logo.png" width="60" height="60" alt="">
+               Ardoch Lake
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#about">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#property">PROPERTY</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#details">DETAILS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#maps">MAPS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contact">CONTACT</a>
+                  </li>
+               </ul>
+            </div>
          </div>
-      </div>
-   </nav>
+      </nav>
+
+   </header>
 
    <!-- Hero Video -->
-   <header class="home-hero" role="banner" id="home">
+   <section class="hero" role="banner" id="home">
       <div class="text-center" id="heroVideo">
-         <!-- <div class="d-grid justify-content-center">
-            <button data-title="Play (k)" class="btn btn-outline-secondary btn-block" id="play">
-               <i class="fas fa-play" aria-hidden="true"></i>
-            </button>
-         </div> -->
-         <video playsinline controls class="player" id="player">
+         <video class="player" id="player" playsinline loop muted="muted">
             <source src="assets/vid/bg-vid.mp4" type="video/mp4">
          </video>
       </div>
-   </header>
+   </section>
 
    <!-- About Section -->
    <section id="about" class="about section-bg">
@@ -334,7 +328,7 @@
    </section>
 
    <!-- Contact Section-->
-   <section class="bg-light py-5" id="contact">
+   <section class="contact py-5" id="contact">
       <div class="container py-5">
          <header class="mb-5 pb-4">
             <p class="fw-bold text-primary text-uppercase letter-spacing-3">Contact</p>
@@ -390,6 +384,7 @@
             clearInterval(id);
             i = 0;
             document.getElementById("loader").style.display = 'none';
+            player.play();
             i = 1;
             } else {
             width++;
@@ -412,11 +407,9 @@
       if (document.getElementById('street-btn').checked) {
          satView.style.display = 'none';
          streetView.style.display = 'block';
-         console.log('Show Street Checked')
       } else if (document.getElementById('sat-btn').checked) {
          streetView.style.display  = 'none';
          satView.style.display  = 'block';
-         console.log('Show Satellite Checked')
       }
    }
 
@@ -425,9 +418,8 @@
       radio.addEventListener('click', handleRadioClick);
    });
 
-   document.addEventListener('DOMContentLoaded', () => {
-      const player = Plyr.setup('.player');
-   });
+   const player = new Plyr('#player');
+
 
 </script>
 </html>

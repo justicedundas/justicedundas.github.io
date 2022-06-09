@@ -37,35 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
 }
 
-/*------------------------------------------------
-# Section & Section header
-------------------------------------------------*/
-section {
-    padding: 80px 0;
-    overflow: hidden;
-}
 
-.section-bg {
-    background-color: #F6F9FF;
-}
-
-.section-header {
-    text-align: center;
-    padding-bottom: 70px;
-}
-
-.section-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    position: relative;
-    color: #2e3135;
-}
-
-@media (min-width: 1199px) {
-    .section-header p {
-        max-width: 60%;
-    }
-}
 
 /*------------------------------------------------
 # Preloader with Bootstrap Progress Bar
@@ -190,20 +162,82 @@ section {
     }
 }
 
+
+
+/*------------------------------------------------
+# Navbar Desktop
+------------------------------------------------*/
+
+.navbar-scroll {
+    padding: 0;
+    background-color: rgba(67, 70, 86, 0.4);
+}
+
+.navbar-brand {
+    font-size: 1rem;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #FFFFFF;
+    border-top: 1px solid white;
+}
+
+.navbar a.active {
+    color: #FFFFFF;
+    border-top: 1px solid white;
+}
+
+@media (max-width: 991px) {
+    .navbar-scroll {
+        background-color: rgba(67, 70, 86, 0.4);
+    }
+
+    .navbar-scroll .navbar-brand,
+    .navbar-scroll .nav-link,
+    .navbar-scroll .fa-bars {
+        color: #fff !important;
+    }
+    .navbar button {
+        color: #fff;
+    }
+}
+
+.navbar-scroll .navbar-brand,
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+    color: #fff;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+    color: var(--color-secondary);
+}
+
+.navbar-scrolled {
+    background-color: rgb(67, 70, 86, 0.5);
+}
+
+
 /*------------------------------------------------
 # Hero Header
 ------------------------------------------------*/
 
-header.home-hero {
+section.hero {
     position: relative;
     height: 100vh;
     min-height: 25rem;
     width: 100%;
-    overflow: hidden;
+    padding: 0 0 !important;
 }
 
 
-header video {
+.hero video {
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -225,6 +259,36 @@ img#heroImage {
     height: 100vh;
 }
 
+/*------------------------------------------------
+# Section & Section header
+------------------------------------------------*/
+
+section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: #F6F9FF;
+}
+
+.section-header {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    color: #2e3135;
+}
+
+@media (min-width: 1199px) {
+    .section-header p {
+        max-width: 60%;
+    }
+}
 
 /*------------------------------------------------
 # About Section
@@ -406,70 +470,7 @@ img#heroImage {
     padding-bottom: 15px;
 }
 
-/*------------------------------------------------
-# Maps Section
-------------------------------------------------*/
-
-.maps {
-    background-color: #FFFFFF !important;
-    height: fit-content;
-    width: 100%;
-    padding-top: 2em;
-
-}
-
-.maps h3 {
-    font-size: 3em;
-    text-align: center;
-    color: var(--color-secondary);
-}
-
-iframe#map-box-street {
-    display: block;
-}
-
-iframe#map-box-sat {
-    display: none;
-}
-
-
-/* ------------------------------------------------- */
-/* ------------------------------------------------- */
-/* ------------------------------------------------- */
-/* ------------------------------------------------- */
-/*
-
-/* Navbar */
-
-.navbar {
-    padding: 0;
-    background-color:  rgba(0, 0, 0, 0.5) !important;
-}
-
-.navbar-brand {
-    font-size: 1rem;
-    padding-bottom: 0;
-}
-
-.navbar .navbar-nav .nav-link:hover {
-    color: #FFFFFF;
-    border-top: 1px solid white;
-}
-
-.navbar a.active {
-    color: #FFFFFF;
-    border-top: 1px solid white;
-}
-
-.navbar.scrolled {
-    background-color:  rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Hero Video */
-
-
-
-/* Details layout */
+/* Details to change */
 div#details {
     height: 90vh;
     width: 100%;
@@ -501,20 +502,41 @@ div.price {
     color: var(--color-default) !important;
 }
 
-/* Maps Section */
-/* Contact Section */
+/*------------------------------------------------
+# Maps Section
+------------------------------------------------*/
+
+.maps {
+    background-color: #FFFFFF !important;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.maps h3 {
+    font-size: 3em;
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+iframe#map-box-street {
+    display: block;
+}
+
+iframe#map-box-sat {
+    display: none;
+}
+
+/*------------------------------------------------
+# Contact Section
+------------------------------------------------*/
+
 .dark-text {
     color: #000000 !important;
 }
 
-.h5 {
-    color: #000000 !important;
-}
-div.contact {
-    color: #000000;
-    height: 50vh;
-    width: 100%;
-    padding-top: 2em;
+section.contact h2 {
+    color: var(--color-secondary) !important;
 }
 
 .contact-item {
@@ -526,3 +548,9 @@ div.contact {
 .shadow-sm {
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
 }
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/*
