@@ -46,7 +46,7 @@
                   <a class="nav-link" href="#details">DETAILS</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#maps">MAP</a>
+                  <a class="nav-link" href="#maps">MAPS</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#contact">CONTACT</a>
@@ -285,7 +285,7 @@
    </section>
 
    <!-- Maps Section-->
-   <div class="container-fluid maps" id="maps">
+   <section class="container-fluid maps" id="maps">
       <div class="container container-wide">
          <div class="row">
             <h3 class="dark">Map</h3>
@@ -305,30 +305,14 @@
 
       <!-- Map Box -->
       <div class="wrapper">
-         <!-- <div id="map-box-street"> -->
+            <!-- Street Map -->
             <iframe id="map-box-street" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11301.403164024108!2d-76.89038343183627!3d44.91620137786145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd254a73725d681%3A0xd7cf73432cef77b5!2s5026%20Ardoch%20Rd%2C%20North%20Frontenac%2C%20ON%20K0H%202J0!5e0!3m2!1sen!2sca!4v1654741204548!5m2!1sen!2sca" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         <!-- </div> -->
-         <!-- <div id="map-box-sat"> -->
+            <!-- Satellite Map -->
             <iframe id="map-box-sat" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.848378628087!2d-76.88381738433013!3d44.91620137786145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd254a73725d681%3A0xd7cf73432cef77b5!2s5026%20Ardoch%20Rd%2C%20North%20Frontenac%2C%20ON%20K0H%202J0!5e1!3m2!1sen!2sca!4v1654741921420!5m2!1sen!2sca" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         <!-- </div> -->
       </div>
-   </div>
+   </section>
 
    <!-- Contact Section-->
-   <!-- <div class="container-fluid contact" id="contact">
-      <div class="container container-wide">
-         <div class="row">
-            <h3>Contact</h3>
-         </div>
-         <div class="row">
-            <div class="divider">
-               <image src="assets/img/divider.svg" class="divider-white" >
-            </div>
-         </div>
-         <div class="row">
-         </div>
-      </div>
-   </div> -->
    <section class="bg-light py-5" id="contact">
       <div class="container py-5">
          <header class="mb-5 pb-4">
@@ -368,7 +352,7 @@
       </div>
    </section>
 </body>
-<script src="https://player.vimeo.com/api/player.js"></script>
+<!-- Javascript Functions -->
 <script>
 
    function changeImage(element) {
@@ -393,24 +377,6 @@
    radioButtons.forEach(radio => {
       radio.addEventListener('click', handleRadioClick);
    });
-
-   // if (window.matchMedia("(max-width: 900px)").matches) {
-   //    const heroVideo = document.getElementById("heroVideo");
-   //    const infoDesktop = document.getElementById("infoImg");
-   //    const heroImg = document.createElement("img");
-   //    const infoImg = document.createElement("img");
-
-   //    // set Attributes
-   //    heroImg.setAttribute("id", "heroImage")
-   //    heroImg.setAttribute('src', 'assets/img/bg-1.jpg');
-
-   //    infoImg.setAttribute("src", "assets/img/mobile.png");
-   //    infoImg.setAttribute("width", "100%");
-
-   //    // Replace with image
-   //    heroVideo.replaceWith(heroImg);
-   //    infoDesktop.replaceWith(infoImg);
-   // };
 
 </script>
 </html>
