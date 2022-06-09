@@ -11,6 +11,7 @@
     --color-secondary: #434656;
 
     --bs-primary: #588EF7;
+    --plyr-color-main: #588EF7;
 }
 
 
@@ -148,7 +149,7 @@ section {
     }
 
     .loader p {
-        font-size: 1vh;
+        font-size: 0.75vh;
         padding-top: 2px;
     }
     .progress {
@@ -202,10 +203,10 @@ header.home-hero {
 }
 
 
-header.home-hero video {
+header video {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     right: 0;
     bottom: 0;
@@ -219,6 +220,11 @@ img#heroImage {
     top: 0;
     bottom: 0;
 }
+
+.plyr {
+    height: 100vh;
+}
+
 
 /*------------------------------------------------
 # About Section
