@@ -10,7 +10,8 @@
    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
    <!-- Font Awesome Icons -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
 
    <!-- Bootstrap import -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
@@ -109,7 +110,7 @@
                </div> <!-- End Icon Box -->
 
                <div class="icon-box d-flex position-relative">
-                  <i class="fa fa-ship flex-shrink-0"></i>
+                  <i class="fas fa-swimmer flex-shrink-0"></i>
                   <div>
                      <h4><a href="" class="stretched-link">Gorgeous Lake</a></h4>
                      <p>Firm bottomed with excellent depths of over 50 feet, sandy access into crystal clear spring-fed water. Enjoy boating, fishing, hiking, camping,  and numerous winter activities in unsurpassed, private, natural beauty.</p>
@@ -130,25 +131,55 @@
 
    <!-- Property Section-->
    <section id="property" class="property ">
-      <div class="container container-wide" >
-         <div class="row">
-            <h3>Property</h3>
-         </div>
-         <div class="row justify-content-center">
-            <div class="col-sm-2">
-               <select class="form-select form-select-sm" onChange="changeImage(this);">
-                  <option value="assets/img/shoreline.jpg">Shoreline</option>
-                  <option value="assets/img/lots.jpg">Lots</option>
-                  <option value="assets/img/title.jpg">Title</option>
-               </select>
+      <div class="container" >
+         <div class="row justify-content-around gy-4">
+            <div class="col-lg-5 d-flex flex-column justify-content-center">
+               <h3>Property</h3>
+
+               <div class="icon-box d-flex position-relative">
+                  <i class="fas fa-check-double flex-shrink-0"></i>
+                  <div>
+                     <h4><a href="" class="stretched-link">Draft Plan Approved</a></h4>
+                     <p>Condominium Draft Plan Approved for 23 Residential Estate Lots (15 waterfront and 8 inland lots).  Each lot is a minimum of two acres; waterfront lots have shoreline frontages ranging from 250 to 950 feet. Includes an existing two bedroom waterfront cottage (Lot 11).</p>
+                  </div>
+               </div> <!-- End Icon Box -->
+
+               <div class="icon-box d-flex position-relative">
+                  <i class="fas fa-ship flex-shrink-0"></i>
+                  <div>
+                     <h4><a href="" class="stretched-link">Room for Activities</a></h4>
+                     <p>Ardoch Lake connects to Malcolm Lake and has a shoreline perimeter of approximately 5.8 km; lake length of 1.9 km and width of lkm;  maximum depth of 56 feet with the following fish species: Walleye; Northern Pike; Smallmouth Bass; White Sucker; Rock Bass and Pumpkinseed.</p>
+                     <p>Firm bottomed with excellent depths of over 50 feet, sandy access into crystal clear spring-fed water. Enjoy boating, fishing, hiking, camping,  and numerous winter activities in unsurpassed, private, natural beauty.</p>
+                  </div>
+               </div> <!-- End Icon Box -->
+
+               <div class="icon-box d-flex position-relative">
+                  <i class="far fa-compass flex-shrink-0"></i>
+                  <div>
+                     <h4><a href="" class="stretched-link">Great Location</a></h4>
+                     <p>Ardoch Lake is located 35 minutes north of the village of Shar bot Lake; 1.25 hours north of Kingston; 1.5 hours west of Ottawa; in the North Frontenac Township in the County of Frontenac</p>
+                  </div>
+               </div> <!-- End Icon Box -->
             </div>
-         </div>
-      </div>
-      <div class="container container-wide">
-         <div class="row justify-content-center">
-            <div class="col-lg-9 no-padding  shadow-frame overflow-hidden">
-               <div class="img">
-                  <img class="img-fluid" id="propertyImage" src="assets/img/shoreline.jpg">
+
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+               <div class="row justify-content-center">
+                  <div class="col-sm-4">
+                     <select class="form-select form-select-sm" onChange="changeImage(this);">
+                        <option value="assets/img/shoreline.jpg">Shoreline</option>
+                        <option value="assets/img/lots.jpg">Lots</option>
+                        <option value="assets/img/title.jpg">Title</option>
+                     </select>
+                  </div>
+                  <div class="container container-wide">
+                     <div class="row justify-content-center">
+                        <div class="col-lg-9 no-padding  shadow-frame overflow-hidden">
+                           <div class="img">
+                              <img class="img-fluid" id="propertyImage" src="assets/img/shoreline.jpg">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>

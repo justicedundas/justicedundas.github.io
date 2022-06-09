@@ -86,7 +86,6 @@ header.home-hero video {
     right: 0;
     bottom: 0;
     left: 0;
-    /* z-index: -1; */
 }
 
 img#heroImage {
@@ -176,15 +175,79 @@ img#heroImage {
 # Property Section
 ------------------------------------------------*/
 
-.property h3 {
+/* .property h3 {
     font-size: 3em;
     color: var(--color-secondary);
     margin-bottom: 20px;
     padding-bottom: 20px;
     text-align: center;
+} */
 
+.property h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
 }
 
+.property h3:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--color-primary);
+    left: 0;
+    bottom: 0;
+}
+
+.property .icon-box {
+    margin-top: 40px;
+}
+
+.property .icon-box i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    margin-right: 25px;
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    line-height: 0;
+    box-shadow: 0px 2px 30px rgb(0 0 0 / 8%);
+    background-color: #fff;
+    /* transition: 0.3s; */
+}
+
+.property .icon-box:hover i {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.property .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.property .icon-box h4 a {
+    color: #000000;
+    transition: 0.3s;
+}
+
+.property .icon-box h4 a:hover {
+    color: var(--color-primary);
+}
+
+.property .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
 /*------------------------------------------------
 # Details Section
 ------------------------------------------------*/
