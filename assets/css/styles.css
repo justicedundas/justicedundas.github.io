@@ -10,6 +10,7 @@
     --color-primary: #588EF7;
     --color-secondary: #434656;
 
+    --bs-primary: #588EF7;
 }
 
 
@@ -62,6 +63,129 @@ section {
 @media (min-width: 1199px) {
     .section-header p {
         max-width: 60%;
+    }
+}
+
+/*------------------------------------------------
+# Preloader with Bootstrap Progress Bar
+------------------------------------------------*/
+.loader {
+    position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1999;
+    background-color: #FFFFFF;
+    color: var(--color-secondary);
+}
+
+.loader-container {
+	/* width: 600px;
+	height: 200px; */
+    width: 60vw;
+    height: 20vh;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+	text-align: center;
+}
+
+/* Desktop Loader */
+@media screen and (min-width: 900px) {
+    .loader h3 {
+        font-family: 'Roboto';
+        font-size: 6vh;
+    }
+
+    .loader h5 {
+        font-family: 'Roboto';
+        font-size: 2.5vh;
+        padding-bottom: 2vh;
+    }
+
+    .loader h6 {
+        font-family: 'Roboto';
+        font-size: 1.5vh;;
+    }
+
+    .loader p {
+        font-size: 0.75vh;
+        padding-top: 2px;
+    }
+}
+
+.progress {
+    height: 3px;
+    width: 40%;
+    margin: auto;
+}
+
+.progress-bar {
+    color: var(--color-primary);
+}
+
+/* Desktop Loader */
+@media screen and (min-width: 900px) {
+    .loader h3 {
+        font-family: 'Roboto';
+        font-size: 6vh;
+    }
+
+    .loader h5 {
+        font-family: 'Roboto';
+        font-size: 2.5vh;
+        padding-bottom: 2vh;
+    }
+
+    .loader h6 {
+        font-family: 'Roboto';
+        font-size: 1.5vh;;
+    }
+
+    .loader p {
+        font-size: 1vh;
+        padding-top: 2px;
+    }
+    .progress {
+    height: 3px;
+    width: 40%;
+    margin: auto;
+}
+}
+
+
+/* Mobile Loader */
+@media screen and (max-width: 900px) {
+    .loader h3 {
+        font-family: 'Roboto';
+        font-size: 3vh;
+    }
+
+    .loader h5 {
+        font-family: 'Roboto';
+        font-size: 1.5vh;
+        padding-bottom: 2vh;
+    }
+
+    .loader h6 {
+        font-family: 'Roboto';
+        font-size: 1vh;
+    }
+
+    .loader p {
+        font-size: 0.5vh;
+        padding-top: 2px;
+    }
+
+    .progress {
+        height: 3px;
+        width: 80%;
+        margin: auto;
     }
 }
 
@@ -174,14 +298,6 @@ img#heroImage {
 /*------------------------------------------------
 # Property Section
 ------------------------------------------------*/
-
-/* .property h3 {
-    font-size: 3em;
-    color: var(--color-secondary);
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-} */
 
 .property h3 {
     font-size: 28px;

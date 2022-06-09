@@ -21,6 +21,18 @@
    <link rel="stylesheet" href="assets/css/styles.css" >
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarResponsive">
+   <!-- Preloader with Bootstrap Progress Bar -->
+   <div class='loader' id="loader">
+      <div class='loader-container'>
+         <h6>WELCOME TO</h6>
+         <h3>5026 ARDOCH RD</h3>
+         <h5>NORTH FRONTENAC, ON K0H 2J0</h5>
+         <div class='progress progress-striped active'>
+            <div class='progress-bar progress-bar-color' id='bar' role='progressbar' style='width: 0%;'></div>
+         </div>
+         <p id="percent">1%</p>
+      </div>
+   </div>
    <!-- Navbar -->
    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-fluid">
@@ -355,6 +367,32 @@
 <!-- Javascript Functions -->
 <script>
 
+
+   var i = 0;
+   function move() {
+      if (i == 0) {
+         var bar = document.getElementById("bar");
+         var percent = document.getElementById("percent")
+         var width = 1;
+         var id = setInterval(frame, 90);
+         function frame() {
+            if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+            document.getElementById("loader").style.display = 'none';
+            i = 1;
+            } else {
+            width++;
+            bar.style.width = width + "%";
+            percent.innerText = width + "%"
+            }
+         }
+      }
+   };
+
+   move();
+
+
    function changeImage(element) {
       document.querySelector("#propertyImage").src = element.value
    };
@@ -377,6 +415,7 @@
    radioButtons.forEach(radio => {
       radio.addEventListener('click', handleRadioClick);
    });
+
 
 </script>
 </html>
