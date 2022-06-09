@@ -6,13 +6,18 @@
    <meta name="Ardoch Lake" content="Webpage">
 
    <title>Ardoch Lake</title>
+   <!-- Google Font - Poppins -->
+   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+   <!-- Font Awesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
    <!-- Bootstrap import -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
-   <link rel="stylesheet" href="assets/css/styles.css" >
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script></head>
 
-
+   <!-- Import CSS -->
+   <link rel="stylesheet" href="assets/css/styles.css" >
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarResponsive">
    <!-- Navbar -->
@@ -31,7 +36,7 @@
                   <a class="nav-link" href="#home">HOME</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#slideshow">SLIDESHOW</a>
+                  <a class="nav-link" href="#about">ABOUT</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="#property">PROPERTY</a>
@@ -51,72 +56,79 @@
    </nav>
 
    <!-- Hero Video -->
-   <header class="home-hero" role="banner" id="home">
-      <div id="heroVideo" style="padding:56.25% 0 0 0;position:relative;">
-         <iframe id="hero-video" src="https://player.vimeo.com/video/718015418?h=6d34f1dad8&amp;badge=0&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="output">
-         </iframe>
-      </div>
+   <header class="home-hero section-bg" role="banner" id="home">
+      <iframe src="https://player.vimeo.com/video/718015418?h=6d34f1dad8" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
    </header>
 
-   <!-- Details -->
-   <section class="information">
+   <!-- About Section -->
+   <section id="about" class="about">
       <div class="container">
-         <img src="assets/img/desktop.png" alt="" width="100%" id="infoImg">
+         <div class="row justify-content-around gy-4">
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+               <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <img src="assets/img/slideshow-1.jpg" class="d-block w-100" alt="...">
+                     </div>
+                     <div class="carousel-item">
+                        <img src="assets/img/slideshow-2.jpg" class="d-block w-100" alt="...">
+                     </div>
+                     <div class="carousel-item">
+                        <img src="assets/img/slideshow-3.jpg" class="d-block w-100" alt="...">
+                     </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
+            </div>
+
+            <div class="col-lg-5 d-flex flex-column justify-content-center">
+               <h3>Welcome to Ardoch Lake</h3>
+
+               <div class="icon-box d-flex position-relative">
+                  <i class="fa fa-tree flex-shrink-0"></i>
+                  <div>
+                     <h4><a href="" class="stretched-link">Beautiful Property</a></h4>
+                     <p>Over 5,000 feet of pristine, untouched, level waterfront and 270 acres of wilderness on Ardoch Lake in North Frontenac, the heart of Eastern Ontario's cottage country and in the Canadian Shield.</p>
+                  </div>
+               </div> <!-- End Icon Box -->
+
+               <div class="icon-box d-flex position-relative">
+                  <i class="fa fa-ship flex-shrink-0"></i>
+                  <div>
+                     <h4><a href="" class="stretched-link">Gorgeous Lake</a></h4>
+                     <p>Firm bottomed with excellent depths of over 50 feet, sandy access into crystal clear spring-fed water. Enjoy boating, fishing, hiking, camping,  and numerous winter activities in unsurpassed, private, natural beauty.</p>
+                  </div>
+               </div> <!-- End Icon Box -->
+
+               <div class="icon-box d-flex position-relative">
+                  <i class="fa fa-road flex-shrink-0"></i>
+                  <div>
+                     <h4><a href="" class="stretched-link">Accesible Yet Private</a></h4>
+                     <p>Access to the site by a main private road with extensive logging trails to a mixed forest of hardwoods and softwoods. Additional access to Fawn, Twin Island and Crotch Lakes which are fully surrounded by Crown Lands.</p>
+                  </div>
+               </div> <!-- End Icon Box -->
+            </div>
+         </div>
       </div>
    </section>
 
-   <!-- Slidesow -->
-   <div class="container-fluid section slideshow" id="slideshow">
-      <div class="container container-wide">
-         <div class="row">
-            <h3>Slideshow</h3>
-         </div>
-         <div class="row">
-            <div class="divider">
-               <image src="assets/img/divider.svg" class="divider-white" >
-            </div>
-         </div>
-      </div>
-      <div class="container container-wide">
-         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <img src="assets/img/slideshow-1.jpg" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item">
-                  <img src="assets/img/slideshow-2.jpg" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item">
-                  <img src="assets/img/slideshow-3.jpg" class="d-block w-100" alt="...">
-               </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-            </button>
-         </div>
-      </div>
-   </div>
-
    <!-- Property Section-->
-   <div class="container-fluid section property" id="property">
+   <section id="property" class="property section-bg">
       <div class="container container-wide" >
          <div class="row">
-            <h3 class="dark">Property</h3>
-         </div>
-         <div class="row">
-            <div class="divider">
-               <image src="assets/img/divider.svg" class="divider-white" >
-            </div>
+            <h3>Property</h3>
          </div>
          <div class="row justify-content-center">
             <div class="col-sm-2">
@@ -129,18 +141,18 @@
          </div>
       </div>
       <div class="container container-wide">
-         <div class="row align-items-center">
-            <div class="col-12 no-padding cover-height shadow-frame overflow-hidden">
+         <div class="row justify-content-center">
+            <div class="col-lg-9 no-padding  shadow-frame overflow-hidden">
                <div class="img">
                   <img class="img-fluid" id="propertyImage" src="assets/img/shoreline.jpg">
                </div>
             </div>
          </div>
       </div>
-   </div>
+   </section>
 
    <!-- Details Section -->
-   <div class="container-fluid" id="details">
+   <section class="details" id="details">
       <div class="container d-flex flex-wrap h-100 justify-content-center">
 
          <!-- Property Information -->
@@ -236,7 +248,7 @@
                </div>
             </div>
       </div>
-   </div>
+   </section>
 
    <!-- Maps Section-->
    <div class="container-fluid maps" id="maps">
@@ -244,11 +256,7 @@
          <div class="row">
             <h3 class="dark">Map</h3>
          </div>
-         <div class="row">
-            <div class="divider">
-               <image src="assets/img/divider.svg" class="divider-white" >
-            </div>
-         </div>
+
       </div>
       <div class="wrapper">
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2825.3507910110384!2d-76.88382274915247!3d44.91620137775953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd254a73725d681%3A0xd7cf73432cef77b5!2s5026%20Ardoch%20Rd%2C%20North%20Frontenac%2C%20ON%20K0H%202J0!5e0!3m2!1sen!2sca!4v1654277437150!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -311,12 +319,7 @@
 </body>
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-   // Carousel Script
-   // $('.carousel').carousel({
-   //    interval: 2000
-   // });
 
-   // Change image selection
    function changeImage(element) {
       document.querySelector("#propertyImage").src = element.value
    };
