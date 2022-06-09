@@ -284,6 +284,32 @@ img#heroImage {
     padding-bottom: 15px;
 }
 
+/*------------------------------------------------
+# Maps Section
+------------------------------------------------*/
+
+.maps {
+    background-color: #FFFFFF !important;
+    height: fit-content;
+    width: 100%;
+    padding-top: 2em;
+
+}
+
+.maps h3 {
+    font-size: 3em;
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+iframe#map-box-street {
+    display: block;
+}
+
+iframe#map-box-sat {
+    display: none;
+}
+
 
 /* ------------------------------------------------- */
 /* ------------------------------------------------- */
@@ -354,20 +380,6 @@ div.price {
 }
 
 /* Maps Section */
-.maps {
-    background-color: #FFFFFF !important;
-    height: fit-content;
-    width: 100%;
-    padding-top: 2em;
-
-}
-
-.maps h3 {
-    font-size: 3em;
-    text-align: center;
-    color: var(--color-secondary);
-}
-
 /* Contact Section */
 .dark-text {
     color: #000000 !important;

@@ -290,10 +290,27 @@
          <div class="row">
             <h3 class="dark">Map</h3>
          </div>
+         <div class="row py-4 justify-content-center">
+            <div class="col-lg-6  d-flex flex-column text-center">
+               <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="street-btn" autocomplete="off" checked>
+                  <label class="btn btn-outline-primary btn-rounded col-lg-3" for="street-btn">Street View</label>
 
+                  <input type="radio" class="btn-check" name="btnradio" id="sat-btn" autocomplete="off">
+                  <label class="btn btn-outline-primary btn-rounded col-lg-3" for="sat-btn">Satellite View</label>
+               </div>
+            </div>
+         </div>
       </div>
+
+      <!-- Map Box -->
       <div class="wrapper">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2825.3507910110384!2d-76.88382274915247!3d44.91620137775953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd254a73725d681%3A0xd7cf73432cef77b5!2s5026%20Ardoch%20Rd%2C%20North%20Frontenac%2C%20ON%20K0H%202J0!5e0!3m2!1sen!2sca!4v1654277437150!5m2!1sen!2sca" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <!-- <div id="map-box-street"> -->
+            <iframe id="map-box-street" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11301.403164024108!2d-76.89038343183627!3d44.91620137786145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd254a73725d681%3A0xd7cf73432cef77b5!2s5026%20Ardoch%20Rd%2C%20North%20Frontenac%2C%20ON%20K0H%202J0!5e0!3m2!1sen!2sca!4v1654741204548!5m2!1sen!2sca" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <!-- </div> -->
+         <!-- <div id="map-box-sat"> -->
+            <iframe id="map-box-sat" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.848378628087!2d-76.88381738433013!3d44.91620137786145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd254a73725d681%3A0xd7cf73432cef77b5!2s5026%20Ardoch%20Rd%2C%20North%20Frontenac%2C%20ON%20K0H%202J0!5e1!3m2!1sen!2sca!4v1654741921420!5m2!1sen!2sca" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <!-- </div> -->
       </div>
    </div>
 
@@ -358,23 +375,42 @@
       document.querySelector("#propertyImage").src = element.value
    };
 
-   if (window.matchMedia("(max-width: 900px)").matches) {
-      const heroVideo = document.getElementById("heroVideo");
-      const infoDesktop = document.getElementById("infoImg");
-      const heroImg = document.createElement("img");
-      const infoImg = document.createElement("img");
+   function handleRadioClick() {
+      var streetView = document.querySelector('#map-box-street');
+      var satView = document.querySelector('#map-box-sat');
+      if (document.getElementById('street-btn').checked) {
+         satView.style.display = 'none';
+         streetView.style.display = 'block';
+         console.log('Show Street Checked')
+      } else if (document.getElementById('sat-btn').checked) {
+         streetView.style.display  = 'none';
+         satView.style.display  = 'block';
+         console.log('Show Satellite Checked')
+      }
+   }
 
-      // set Attributes
-      heroImg.setAttribute("id", "heroImage")
-      heroImg.setAttribute('src', 'assets/img/bg-1.jpg');
+   const radioButtons = document.querySelectorAll('input[name="btnradio"]');
+   radioButtons.forEach(radio => {
+      radio.addEventListener('click', handleRadioClick);
+   });
 
-      infoImg.setAttribute("src", "assets/img/mobile.png");
-      infoImg.setAttribute("width", "100%");
+   // if (window.matchMedia("(max-width: 900px)").matches) {
+   //    const heroVideo = document.getElementById("heroVideo");
+   //    const infoDesktop = document.getElementById("infoImg");
+   //    const heroImg = document.createElement("img");
+   //    const infoImg = document.createElement("img");
 
-      // Replace with image
-      heroVideo.replaceWith(heroImg);
-      infoDesktop.replaceWith(infoImg);
-   };
+   //    // set Attributes
+   //    heroImg.setAttribute("id", "heroImage")
+   //    heroImg.setAttribute('src', 'assets/img/bg-1.jpg');
+
+   //    infoImg.setAttribute("src", "assets/img/mobile.png");
+   //    infoImg.setAttribute("width", "100%");
+
+   //    // Replace with image
+   //    heroVideo.replaceWith(heroImg);
+   //    infoDesktop.replaceWith(infoImg);
+   // };
 
 </script>
 </html>
