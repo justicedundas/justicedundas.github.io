@@ -435,6 +435,30 @@ section {
     font-size: 14px;
     margin-bottom: 0;
 }
+
+.img {
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
+
+.modalImageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.modalImageContainer img {
+    max-height: 80vh;
+}
+.modalImageContainer:hover img {
+    transform: scale(1.5);
+}
+
+.modal-l {
+    max-width: fit-content;
+}
+
+
 /*------------------------------------------------
 # Details Section
 ------------------------------------------------*/
@@ -449,7 +473,7 @@ section {
 
 .details h4 {
     color: var(--color-secondary);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -481,6 +505,7 @@ div#details {
 h1.asking-price {
     display: inline-block !important;
     color: var(--color-secondary);
+    font-size: 4rem !important;
     font-weight: 800;
     border: 3px solid #FFD580;
     margin: auto;
