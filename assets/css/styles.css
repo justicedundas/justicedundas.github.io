@@ -442,19 +442,31 @@ section {
     cursor: zoom-in;
 }
 
+@media (max-width: 800px) {
+    .modal-l {
+        max-height: 80%;
+        max-width: fit-content;
+    }
+
+    .modalImageContainer img {
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .modal-l {
+        max-width: fit-content;
+    }
+
+    .modalImageContainer img {
+        max-height: 80vh;
+    }
+}
 .modalImageContainer {
     position: relative;
     overflow: hidden;
 }
-
-.modalImageContainer img {
-    max-height: 80vh;
-}
-
-.modal-l {
-    max-width: fit-content;
-}
-
 
 /*------------------------------------------------
 # Details Section
