@@ -450,9 +450,6 @@ section {
 .modalImageContainer img {
     max-height: 80vh;
 }
-.modalImageContainer:hover img {
-    transform: scale(1.5);
-}
 
 .modal-l {
     max-width: fit-content;
